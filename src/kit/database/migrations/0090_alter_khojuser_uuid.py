@@ -43,7 +43,7 @@ def cleanup_orphaned_automations(uuid_mappings):
     """Remove automations with malformed UUIDs in job_ids"""
     from apscheduler.jobstores.base import JobLookupError
 
-    from KIT.utils import state
+    from kit.utils import state
 
     if not state.scheduler:
         return
