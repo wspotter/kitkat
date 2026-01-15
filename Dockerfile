@@ -52,13 +52,13 @@ FROM base
 ENV PYTHONPATH=/app/src
 WORKDIR /app
 COPY --from=server-deps /usr/local/lib/python3.10/dist-packages /usr/local/lib/python3.10/dist-packages
-COPY --from=web-app /app/src/interface/web/out ./src/KIT/interface/built
+COPY --from=web-app /app/src/interface/web/out ./src/kit/interface/built
 COPY . .
-RUN cd src && python3 KIT/manage.py collectstatic --noinput
+RUN cd src && python3 kit/manage.py collectstatic --noinput
 
 # Run the Application
 # There are more arguments required for the application to run,
 # but those should be passed in through the docker-compose.yml file.
 ARG PORT=42110
 EXPOSE ${PORT}
-ENTRYPOINT ["python3", "src/KIT/main.py"]
+ENTRYPOINT ["python3", "src/kit/main.py"]
