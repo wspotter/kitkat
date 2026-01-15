@@ -3,7 +3,7 @@ from typing import Any, AsyncGenerator, Dict, List, Optional
 
 from langchain_core.messages.chat import ChatMessage
 
-from KIT.processor.conversation.openai.utils import (
+from kit.processor.conversation.openai.utils import (
     chat_completion_with_backoff,
     clean_response_schema,
     completion_with_backoff,
@@ -14,12 +14,12 @@ from KIT.processor.conversation.openai.utils import (
     supports_responses_api,
     to_openai_tools,
 )
-from KIT.processor.conversation.utils import (
+from kit.processor.conversation.utils import (
     ResponseWithThought,
     StructuredOutputSupport,
     messages_to_print,
 )
-from KIT.utils.helpers import ToolDefinition
+from kit.utils.helpers import ToolDefinition
 
 logger = logging.getLogger(__name__)
 

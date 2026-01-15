@@ -9,17 +9,17 @@ from typing import Any, Callable, List, Set, Tuple
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from tqdm import tqdm
 
-from KIT.database.adapters import (
+from kit.database.adapters import (
     EntryAdapters,
     FileObjectAdapters,
     get_default_search_model,
 )
-from KIT.database.models import Entry as DbEntry
-from KIT.database.models import EntryDates, KITUser
-from KIT.search_filter.date_filter import DateFilter
-from KIT.utils import state
-from KIT.utils.helpers import batcher, is_none_or_empty, timer
-from KIT.utils.rawconfig import Entry
+from kit.database.models import Entry as DbEntry
+from kit.database.models import EntryDates, KITUser
+from kit.search_filter.date_filter import DateFilter
+from kit.utils import state
+from kit.utils.helpers import batcher, is_none_or_empty, timer
+from kit.utils.rawconfig import Entry
 
 logger = logging.getLogger(__name__)
 

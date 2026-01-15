@@ -70,7 +70,7 @@ else:
 django_app = get_asgi_application()
 
 # Add CORS middleware
-KIT_DOMAIN = os.getenv("KIT_DOMAIN") or "app.KIT.dev"
+KIT_DOMAIN = os.getenv("KIT_DOMAIN") or "app.kit.dev"
 scheme = "https" if not is_env_var_true("KIT_NO_HTTPS") else "http"
 custom_origins = [f"{scheme}://{KIT_DOMAIN.strip()}", f"{scheme}://{KIT_DOMAIN.strip()}:*"]
 default_origins = [
@@ -79,7 +79,7 @@ default_origins = [
     "http://localhost",  # To allow access from Obsidian Android app
     "http://localhost:*",  # To allow access from localhost
     "http://127.0.0.1:*",  # To allow access from localhost
-    "app://KIT.dev",  # To allow access from KIT desktop app
+    "app://kit.dev",  # To allow access from KIT desktop app
 ]
 
 app.add_middleware(

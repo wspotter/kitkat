@@ -6,9 +6,9 @@ from typing import List, Optional
 from openai import AzureOpenAI, OpenAI
 from openai.types.chat import ChatCompletion, ChatCompletionMessage
 
-from KIT.database.models import ChatModel
-from KIT.processor.conversation.utils import construct_structured_message
-from KIT.processor.operator.operator_actions import (
+from kit.database.models import ChatModel
+from kit.processor.conversation.utils import construct_structured_message
+from kit.processor.operator.operator_actions import (
     BackAction,
     ClickAction,
     DoubleClickAction,
@@ -22,8 +22,8 @@ from KIT.processor.operator.operator_actions import (
     TypeAction,
     WaitAction,
 )
-from KIT.processor.operator.operator_environment_base import EnvironmentType, EnvState
-from KIT.utils.helpers import get_chat_usage_metrics
+from kit.processor.operator.operator_environment_base import EnvironmentType, EnvState
+from kit.utils.helpers import get_chat_usage_metrics
 
 logger = logging.getLogger(__name__)
 

@@ -18,7 +18,7 @@ from openai import AsyncAzureOpenAI, AsyncOpenAI
 from openai.types.chat import ChatCompletion
 from PIL import Image
 
-from KIT.processor.operator.operator_actions import (
+from kit.processor.operator.operator_actions import (
     BackAction,
     ClickAction,
     DoubleClickAction,
@@ -34,8 +34,8 @@ from KIT.processor.operator.operator_actions import (
     TypeAction,
     WaitAction,
 )
-from KIT.processor.operator.operator_environment_base import EnvironmentType, EnvState
-from KIT.utils.helpers import get_chat_usage_metrics
+from kit.processor.operator.operator_environment_base import EnvironmentType, EnvState
+from kit.utils.helpers import get_chat_usage_metrics
 
 logger = logging.getLogger(__name__)
 

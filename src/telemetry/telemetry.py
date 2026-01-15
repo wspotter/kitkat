@@ -11,7 +11,7 @@ from posthog import Posthog
 
 # Initialize Global App Variables
 app = FastAPI()
-sqlfile = "data/KIT.sqlite"
+sqlfile = "data/kit.sqlite"
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 load_dotenv()

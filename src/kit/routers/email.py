@@ -7,7 +7,7 @@ import resend
 from django.conf import settings
 from jinja2 import Environment, FileSystemLoader
 
-from KIT.utils.helpers import is_none_or_empty
+from kit.utils.helpers import is_none_or_empty
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +42,7 @@ async def send_magic_link_email(email, unique_id, host):
 
     resend.Emails.send(
         {
-            "sender": os.environ.get("RESEND_EMAIL", "noreply@KIT.dev"),
+            "sender": os.environ.get("RESEND_EMAIL", "noreply@kit.dev"),
             "to": email,
             "subject": "Your login code to KIT",
             "html": html_content,
@@ -61,7 +61,7 @@ async def send_welcome_email(name, email):
 
     resend.Emails.send(
         {
-            "sender": os.environ.get("RESEND_EMAIL", "team@KIT.dev"),
+            "sender": os.environ.get("RESEND_EMAIL", "team@kit.dev"),
             "to": email,
             "subject": f"{name}, four ways to use KIT" if name else "Four ways to use KIT",
             "html": html_content,
@@ -100,8 +100,8 @@ async def send_query_feedback(uquery, kquery, sentiment, user_email):
     # send feedback to fixed account
     resend.Emails.send(
         {
-            "sender": os.environ.get("RESEND_EMAIL", "noreply@KIT.dev"),
-            "to": "team@KIT.dev",
+            "sender": os.environ.get("RESEND_EMAIL", "noreply@kit.dev"),
+            "to": "team@kit.dev",
             "subject": "User Feedback",
             "html": html_content,
         }
@@ -127,7 +127,7 @@ def send_task_email(name, email, query, result, subject, is_image=False):
 
     r = resend.Emails.send(
         {
-            "sender": f"KIT <{os.environ.get('RESEND_EMAIL', 'KIT@KIT.dev')}>",
+            "sender": f"KIT <{os.environ.get('RESEND_EMAIL', 'KIT@kit.dev')}>",
             "to": email,
             "subject": f"✨ {subject}",
             "html": html_content,

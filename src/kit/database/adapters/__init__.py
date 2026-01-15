@@ -35,7 +35,7 @@ from fastapi import HTTPException
 from pgvector.django import CosineDistance
 from torch import Tensor
 
-from KIT.database.models import (
+from kit.database.models import (
     Agent,
     AiModelApi,
     ChatMessageModel,
@@ -69,12 +69,12 @@ from KIT.database.models import (
     VoiceModelOption,
     WebScraper,
 )
-from KIT.processor.conversation import prompts
-from KIT.search_filter.date_filter import DateFilter
-from KIT.search_filter.file_filter import FileFilter
-from KIT.search_filter.word_filter import WordFilter
-from KIT.utils import state
-from KIT.utils.helpers import (
+from kit.processor.conversation import prompts
+from kit.search_filter.date_filter import DateFilter
+from kit.search_filter.file_filter import FileFilter
+from kit.search_filter.word_filter import WordFilter
+from kit.utils import state
+from kit.utils.helpers import (
     clean_object_for_db,
     clean_text_for_db,
     generate_random_internal_agent_name,

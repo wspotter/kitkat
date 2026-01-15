@@ -6,9 +6,9 @@ from django.db import transaction
 from django.db.models import Q
 from tqdm import tqdm
 
-from KIT.database.adapters import get_default_search_model
-from KIT.database.models import Entry, SearchModelConfig
-from KIT.processor.embeddings import EmbeddingsModel
+from kit.database.adapters import get_default_search_model
+from kit.database.models import Entry, SearchModelConfig
+from kit.processor.embeddings import EmbeddingsModel
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

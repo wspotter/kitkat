@@ -4,8 +4,8 @@ import io
 from django.core.management.base import BaseCommand
 from PIL import Image
 
-from KIT.database.models import Conversation
-from KIT.utils.helpers import ImageIntentType
+from kit.database.models import Conversation
+from kit.utils.helpers import ImageIntentType
 
 
 class Command(BaseCommand):

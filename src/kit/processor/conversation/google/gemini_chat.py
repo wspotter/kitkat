@@ -3,11 +3,11 @@ from typing import AsyncGenerator, List, Optional
 
 from langchain_core.messages.chat import ChatMessage
 
-from KIT.processor.conversation.google.utils import (
+from kit.processor.conversation.google.utils import (
     gemini_chat_completion_with_backoff,
     gemini_completion_with_backoff,
 )
-from KIT.processor.conversation.utils import (
+from kit.processor.conversation.utils import (
     ResponseWithThought,
     messages_to_print,
 )

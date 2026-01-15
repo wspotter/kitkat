@@ -2190,7 +2190,7 @@ class ApiUserRateLimiter:
             )
             raise HTTPException(
                 status_code=429,
-                detail=f"{common_message_prefix} You can subscribe to increase your usage limit via [your settings](https://app.KIT.dev/settings) or we can continue our conversation {next_window}.",
+                detail=f"{common_message_prefix} You can subscribe to increase your usage limit via [your settings](https://app.kit.dev/settings) or we can continue our conversation {next_window}.",
             )
 
         # Add the current request to the cache

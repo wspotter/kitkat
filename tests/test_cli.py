@@ -11,5 +11,5 @@ def test_cli_minimal_default():
     actual_args = cli(["-vvv"])
 
     # Assert
-    assert actual_args.log_file == Path("~/.KIT/KIT.log")
+    assert actual_args.log_file == Path("~/.KIT/kit.log")
     assert actual_args.verbose == 3

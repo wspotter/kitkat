@@ -3,13 +3,13 @@ import re
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-from KIT.database.models import Entry as DbEntry
-from KIT.database.models import KITUser
-from KIT.processor.content.org_mode import orgnode
-from KIT.processor.content.org_mode.orgnode import Orgnode
-from KIT.processor.content.text_to_entries import TextToEntries
-from KIT.utils.helpers import timer
-from KIT.utils.rawconfig import Entry
+from kit.database.models import Entry as DbEntry
+from kit.database.models import KITUser
+from kit.processor.content.org_mode import orgnode
+from kit.processor.content.org_mode.orgnode import Orgnode
+from kit.processor.content.text_to_entries import TextToEntries
+from kit.utils.helpers import timer
+from kit.utils.rawconfig import Entry
 
 logger = logging.getLogger(__name__)
 

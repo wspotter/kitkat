@@ -703,7 +703,7 @@ class Conversation(DbBaseModel):
     async def pop_message(self, interrupted: bool = False) -> Optional[ChatMessageModel]:
         """
         Remove and return the last message from the conversation log, persisting the change to the database.
-        When interrupted is True, we only drop the last message if it was an interrupted message by KIT.
+        When interrupted is True, we only drop the last message if it was an interrupted message by kit.
         """
         chat_log = self.conversation_log.get("chat", [])
 
@@ -712,7 +712,7 @@ class Conversation(DbBaseModel):
 
         last_message = chat_log[-1]
         is_interrupted_msg = last_message.get("by") == "KIT" and not last_message.get("message")
-        # When handling an interruption, only pop if the last message is an empty one by KIT.
+        # When handling an interruption, only pop if the last message is an empty one by kit.
         if interrupted and not is_interrupted_msg:
             return None
 

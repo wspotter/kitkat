@@ -559,8 +559,8 @@ async def test_websearch_KIT_website_for_info_about_KIT(chat_client, default_use
     responses = await generate_online_subqueries(user_query, [], None, default_user2)
 
     # Assert
-    assert any(["site:KIT.dev" in response for response in responses]), (
-        "Expected search query to include site:KIT.dev but got: " + str(responses)
+    assert any(["site:kit.dev" in response for response in responses]), (
+        "Expected search query to include site:kit.dev but got: " + str(responses)
     )
 
 
@@ -719,7 +719,7 @@ def test_infer_task_scheduling_request(
         (
             "Create a weather wallpaper every morning using the current weather",
             "Paint a weather wallpaper using the current weather",
-            "https://KIT-generated-wallpaper.KIT.dev/user110/weathervane.webp",
+            "https://KIT-generated-wallpaper.kit.dev/user110/weathervane.webp",
             True,
         ),
         (

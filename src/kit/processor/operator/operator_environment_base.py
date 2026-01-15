@@ -4,7 +4,7 @@ from typing import Literal, Optional
 
 from pydantic import BaseModel
 
-from KIT.processor.operator.operator_actions import OperatorAction
+from kit.processor.operator.operator_actions import OperatorAction
 
 
 class EnvironmentType(Enum):

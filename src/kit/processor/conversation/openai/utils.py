@@ -34,13 +34,13 @@ from tenacity import (
     wait_random_exponential,
 )
 
-from KIT.processor.conversation.utils import (
+from kit.processor.conversation.utils import (
     ResponseWithThought,
     StructuredOutputSupport,
     ToolCall,
     commit_conversation_trace,
 )
-from KIT.utils.helpers import (
+from kit.utils.helpers import (
     ToolDefinition,
     convert_image_data_uri,
     get_chat_usage_metrics,

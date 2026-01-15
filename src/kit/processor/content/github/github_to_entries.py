@@ -5,14 +5,14 @@ from typing import Dict, List, Tuple
 import requests
 from magika import Magika
 
-from KIT.database.models import Entry as DbEntry
-from KIT.database.models import GithubConfig, KITUser
-from KIT.processor.content.markdown.markdown_to_entries import MarkdownToEntries
-from KIT.processor.content.org_mode.org_to_entries import OrgToEntries
-from KIT.processor.content.plaintext.plaintext_to_entries import PlaintextToEntries
-from KIT.processor.content.text_to_entries import TextToEntries
-from KIT.utils.helpers import is_none_or_empty, timer
-from KIT.utils.rawconfig import GithubContentConfig, GithubRepoConfig
+from kit.database.models import Entry as DbEntry
+from kit.database.models import GithubConfig, KITUser
+from kit.processor.content.markdown.markdown_to_entries import MarkdownToEntries
+from kit.processor.content.org_mode.org_to_entries import OrgToEntries
+from kit.processor.content.plaintext.plaintext_to_entries import PlaintextToEntries
+from kit.processor.content.text_to_entries import TextToEntries
+from kit.utils.helpers import is_none_or_empty, timer
+from kit.utils.rawconfig import GithubContentConfig, GithubRepoConfig
 
 logger = logging.getLogger(__name__)
 magika = Magika()

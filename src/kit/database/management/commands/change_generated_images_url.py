@@ -1,8 +1,8 @@
 from django.core.management.base import BaseCommand
 from tqdm import tqdm
 
-from KIT.database.models import Conversation
-from KIT.utils.helpers import ImageIntentType, is_none_or_empty
+from kit.database.models import Conversation
+from kit.utils.helpers import ImageIntentType, is_none_or_empty
 
 
 class Command(BaseCommand):

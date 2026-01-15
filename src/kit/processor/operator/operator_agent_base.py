@@ -4,19 +4,19 @@ from typing import List, Optional
 
 from pydantic import BaseModel
 
-from KIT.database.models import ChatModel
-from KIT.processor.conversation.utils import (
+from kit.database.models import ChatModel
+from kit.processor.conversation.utils import (
     AgentMessage,
     OperatorRun,
     commit_conversation_trace,
 )
-from KIT.processor.operator.operator_actions import OperatorAction
-from KIT.processor.operator.operator_environment_base import (
+from kit.processor.operator.operator_actions import OperatorAction
+from kit.processor.operator.operator_environment_base import (
     EnvironmentType,
     EnvState,
     EnvStepResult,
 )
-from KIT.utils.helpers import get_chat_usage_metrics, is_promptrace_enabled
+from kit.utils.helpers import get_chat_usage_metrics, is_promptrace_enabled
 
 logger = logging.getLogger(__name__)
 

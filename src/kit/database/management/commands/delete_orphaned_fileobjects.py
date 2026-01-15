@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 from django.db.models import Exists, OuterRef
 
-from KIT.database.models import Entry, FileObject
+from kit.database.models import Entry, FileObject
 
 
 class Command(BaseCommand):

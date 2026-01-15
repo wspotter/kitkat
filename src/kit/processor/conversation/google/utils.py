@@ -23,14 +23,14 @@ from tenacity import (
     wait_random_exponential,
 )
 
-from KIT.processor.conversation.utils import (
+from kit.processor.conversation.utils import (
     ResponseWithThought,
     ToolCall,
     commit_conversation_trace,
     get_image_from_base64,
     get_image_from_url,
 )
-from KIT.utils.helpers import (
+from kit.utils.helpers import (
     ToolDefinition,
     get_chat_usage_metrics,
     get_gemini_client,

@@ -83,12 +83,12 @@ def get_sample_data(type):
 
 ** Installation
 *** Direct
-     - Put ~KIT.el~ in your Emacs load path. For e.g. ~/.emacs.d/lisp
+     - Put ~kit.el~ in your Emacs load path. For e.g. ~/.emacs.d/lisp
      - Load via ~use-package~ in your ~/.emacs.d/init.el or .emacs file by adding below snippet
        #+begin_src elisp
          ;; KIT Package
          (use-package KIT
-           :load-path "~/.emacs.d/lisp/KIT.el"
+           :load-path "~/.emacs.d/lisp/kit.el"
            :bind ("C-c s" . 'KIT))
        #+end_src
 
@@ -98,7 +98,7 @@ def get_sample_data(type):
        #+begin_src elisp
          ;; KIT Package
          (use-package KIT
-           :quelpa (KIT :fetcher url :url "https://raw.githubusercontent.com/KIT-ai/KIT/master/interface/emacs/KIT.el")
+           :quelpa (KIT :fetcher url :url "https://raw.githubusercontent.com/KIT-ai/KIT/master/interface/emacs/kit.el")
            :bind ("C-c s" . 'KIT))
        #+end_src
 
@@ -117,7 +117,7 @@ def get_sample_data(type):
 * KIT
   /Allow natural language search on user content like notes, images using transformer based models/
 
-  All data is processed locally. User can interface with KIT app via [[./interface/emacs/KIT.el][Emacs]], API or Commandline
+  All data is processed locally. User can interface with KIT app via [[./interface/emacs/kit.el][Emacs]], API or Commandline
 
 ** Dependencies
    - Python3
@@ -135,7 +135,7 @@ def get_sample_data(type):
 # KIT
 Allow natural language search on user content like notes, images using transformer based models
 
-All data is processed locally. User can interface with KIT app via [Emacs](./interface/emacs/KIT.el), API or Commandline
+All data is processed locally. User can interface with KIT app via [Emacs](./interface/emacs/kit.el), API or Commandline
 
 ## Dependencies
 - Python3

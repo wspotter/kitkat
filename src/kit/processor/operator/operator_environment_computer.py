@@ -9,13 +9,13 @@ from typing import Literal, Optional, Union
 
 from PIL import Image, ImageDraw
 
-from KIT.processor.operator.operator_actions import DragAction, OperatorAction, Point
-from KIT.processor.operator.operator_environment_base import (
+from kit.processor.operator.operator_actions import DragAction, OperatorAction, Point
+from kit.processor.operator.operator_environment_base import (
     Environment,
     EnvState,
     EnvStepResult,
 )
-from KIT.utils.helpers import convert_image_to_webp
+from kit.utils.helpers import convert_image_to_webp
 
 logger = logging.getLogger(__name__)
 

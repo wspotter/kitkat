@@ -22,20 +22,20 @@ from google.genai import errors as gerrors
 from langchain_core.messages.chat import ChatMessage
 from pydantic import BaseModel, ConfigDict, ValidationError
 
-from KIT.database.adapters import ConversationAdapters
-from KIT.database.models import (
+from kit.database.adapters import ConversationAdapters
+from kit.database.models import (
     ChatMessageModel,
     ClientApplication,
     Intent,
     KITUser,
     UserMemory,
 )
-from KIT.processor.conversation import prompts
-from KIT.search_filter.base_filter import BaseFilter
-from KIT.search_filter.date_filter import DateFilter
-from KIT.search_filter.file_filter import FileFilter
-from KIT.search_filter.word_filter import WordFilter
-from KIT.utils.helpers import (
+from kit.processor.conversation import prompts
+from kit.search_filter.base_filter import BaseFilter
+from kit.search_filter.date_filter import DateFilter
+from kit.search_filter.file_filter import FileFilter
+from kit.search_filter.word_filter import WordFilter
+from kit.utils.helpers import (
     ConversationCommand,
     count_tokens,
     get_encoder,
@@ -43,8 +43,8 @@ from KIT.utils.helpers import (
     is_promptrace_enabled,
     merge_dicts,
 )
-from KIT.utils.rawconfig import FileAttachment
-from KIT.utils.yaml import yaml_dump
+from kit.utils.rawconfig import FileAttachment
+from kit.utils.yaml import yaml_dump
 
 logger = logging.getLogger(__name__)
 
@@ -561,7 +561,7 @@ async def save_to_conversation_log(
     train_of_thought: List[Any] = [],
     tracer: Dict[str, Any] = {},
 ):
-    from KIT.routers.helpers import ai_update_memories
+    from kit.routers.helpers import ai_update_memories
 
     user_message_time = user_message_time or datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     turn_id = tracer.get("mid") or str(uuid.uuid4())
@@ -1123,7 +1123,7 @@ def commit_conversation_trace(
         # Configure git user if not set
         if not repo.config_reader().has_option("user", "email"):
             repo.config_writer().set_value("user", "name", "Prompt Tracer").release()
-            repo.config_writer().set_value("user", "email", "promptracer@KIT.dev").release()
+            repo.config_writer().set_value("user", "email", "promptracer@kit.dev").release()
 
         # Create an initial commit if the repository is newly created
         if not repo.head.is_valid():

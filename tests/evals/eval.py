@@ -720,7 +720,7 @@ if __name__ == "__main__":
     Run the script using the following command:
     KIT_MODE="research" GEMINI_API_KEY="<your_gemini_api_key>" python eval_frames.py
     """
-    logger.info(f"{datetime.now()} - Begin Quizzing KIT.")
+    logger.info(f"{datetime.now()} - Begin Quizzing kit.")
     with timer("Ran eval script in", logger, log_level=logging.INFO):
         main()
-    logger.info(f"{datetime.now()} - End Quizzing KIT.")
+    logger.info(f"{datetime.now()} - End Quizzing kit.")

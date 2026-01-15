@@ -99,7 +99,7 @@ class UserAuthenticationBackend(AuthenticationBackend):
     def __init__(
         self,
     ):
-        from KIT.database.models import KITApiUser, KITUser
+        from kit.database.models import KITApiUser, KITUser
 
         self.KITuser_manager = KITUser.objects
         self.KITapiuser_manager = KITApiUser.objects
@@ -133,7 +133,7 @@ class UserAuthenticationBackend(AuthenticationBackend):
                 logger.error("DB Exception: Failed to authenticate user", exc_info=True)
                 raise HTTPException(
                     status_code=503,
-                    detail="Please report this issue on Github, Discord or email team@KIT.dev and try again later.",
+                    detail="Please report this issue on Github, Discord or email team@kit.dev and try again later.",
                 )
             if user:
                 subscribed = await ais_user_subscribed(user)
@@ -157,7 +157,7 @@ class UserAuthenticationBackend(AuthenticationBackend):
                 logger.error("DB Exception: Failed to authenticate user applications", exc_info=True)
                 raise HTTPException(
                     status_code=503,
-                    detail="Please report this issue on Github, Discord or email team@KIT.dev and try again later.",
+                    detail="Please report this issue on Github, Discord or email team@kit.dev and try again later.",
                 )
             if user_with_token:
                 subscribed = await ais_user_subscribed(user_with_token.user)
@@ -185,7 +185,7 @@ class UserAuthenticationBackend(AuthenticationBackend):
                 logger.error("DB Exception: Failed to authenticate first party application", exc_info=True)
                 raise HTTPException(
                     status_code=503,
-                    detail="Please report this issue on Github, Discord or email team@KIT.dev and try again later.",
+                    detail="Please report this issue on Github, Discord or email team@kit.dev and try again later.",
                 )
             if client_application is None:
                 return AuthCredentials(), UnauthenticatedUser()
@@ -222,7 +222,7 @@ class UserAuthenticationBackend(AuthenticationBackend):
                 logger.error("DB Exception: Failed to fetch default user from DB", exc_info=True)
                 raise HTTPException(
                     status_code=503,
-                    detail="Please report this issue on Github, Discord or email team@KIT.dev and try again later.",
+                    detail="Please report this issue on Github, Discord or email team@kit.dev and try again later.",
                 )
             if user:
                 return AuthCredentials(["authenticated", "premium"]), AuthenticatedKITUser(user)

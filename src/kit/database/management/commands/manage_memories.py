@@ -6,9 +6,9 @@ from django.core.management.base import BaseCommand
 from django.db.models import Q
 from django.utils import timezone
 
-from KIT.configure import initialize_server
-from KIT.database.adapters import UserMemoryAdapters
-from KIT.database.models import (
+from kit.configure import initialize_server
+from kit.database.adapters import UserMemoryAdapters
+from kit.database.models import (
     Conversation,
     DataStore,
     KITUser,
@@ -340,7 +340,7 @@ class Command(BaseCommand):
 
     async def handle_delete_memories(self, usernames: Optional[str], cutoff_date: Optional[datetime], apply: bool):
         """Handle deletion of user memories"""
-        from KIT.database.models import UserMemory
+        from kit.database.models import UserMemory
 
         # Get users to process
         users = await self.get_users_to_process(usernames)

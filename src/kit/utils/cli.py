@@ -11,9 +11,9 @@ def cli(args=None):
     parser = argparse.ArgumentParser(description="Start KIT; An AI personal assistant for your Digital Brain")
     parser.add_argument(
         "--log-file",
-        default="~/.KIT/KIT.log",
+        default="~/.KIT/kit.log",
         type=pathlib.Path,
-        help="File path for server logs. Default: ~/.KIT/KIT.log",
+        help="File path for server logs. Default: ~/.KIT/kit.log",
     )
     parser.add_argument("--verbose", "-v", action="count", default=0, help="Show verbose conversion logs. Default: 0")
     parser.add_argument("--host", type=str, default="127.0.0.1", help="Host address of the server. Default: 127.0.0.1")

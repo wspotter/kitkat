@@ -4,28 +4,28 @@ import logging
 import os
 from typing import Callable, List, Optional
 
-from KIT.database.adapters import AgentAdapters, ConversationAdapters
-from KIT.database.models import Agent, ChatMessageModel, ChatModel, KITUser, UserMemory
-from KIT.processor.conversation.utils import (
+from kit.database.adapters import AgentAdapters, ConversationAdapters
+from kit.database.models import Agent, ChatMessageModel, ChatModel, KITUser, UserMemory
+from kit.processor.conversation.utils import (
     AgentMessage,
     OperatorRun,
     construct_chat_history_for_operator,
 )
-from KIT.processor.operator.operator_actions import RequestUserAction
-from KIT.processor.operator.operator_agent_anthropic import AnthropicOperatorAgent
-from KIT.processor.operator.operator_agent_base import OperatorAgent
-from KIT.processor.operator.operator_agent_binary import BinaryOperatorAgent
-from KIT.processor.operator.operator_agent_openai import OpenAIOperatorAgent
-from KIT.processor.operator.operator_environment_base import (
+from kit.processor.operator.operator_actions import RequestUserAction
+from kit.processor.operator.operator_agent_anthropic import AnthropicOperatorAgent
+from kit.processor.operator.operator_agent_base import OperatorAgent
+from kit.processor.operator.operator_agent_binary import BinaryOperatorAgent
+from kit.processor.operator.operator_agent_openai import OpenAIOperatorAgent
+from kit.processor.operator.operator_environment_base import (
     Environment,
     EnvironmentType,
     EnvStepResult,
 )
-from KIT.processor.operator.operator_environment_browser import BrowserEnvironment
-from KIT.processor.operator.operator_environment_computer import ComputerEnvironment
+from kit.processor.operator.operator_environment_browser import BrowserEnvironment
+from kit.processor.operator.operator_environment_computer import ComputerEnvironment
 from kit.routers.helpers import ChatEvent, get_message_from_queue
-from KIT.utils.helpers import timer
-from KIT.utils.rawconfig import LocationData
+from kit.utils.helpers import timer
+from kit.utils.rawconfig import LocationData
 
 logger = logging.getLogger(__name__)
 

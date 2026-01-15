@@ -4,23 +4,23 @@ from datetime import datetime
 from textwrap import dedent
 from typing import List, Optional
 
-from KIT.database.models import ChatMessageModel, ChatModel
-from KIT.processor.conversation.utils import (
+from kit.database.models import ChatMessageModel, ChatModel
+from kit.processor.conversation.utils import (
     AgentMessage,
     OperatorRun,
     construct_structured_message,
 )
-from KIT.processor.operator.grounding_agent import GroundingAgent
-from KIT.processor.operator.grounding_agent_uitars import GroundingAgentUitars
-from KIT.processor.operator.operator_actions import OperatorAction, WaitAction
-from KIT.processor.operator.operator_agent_base import AgentActResult, OperatorAgent
-from KIT.processor.operator.operator_environment_base import (
+from kit.processor.operator.grounding_agent import GroundingAgent
+from kit.processor.operator.grounding_agent_uitars import GroundingAgentUitars
+from kit.processor.operator.operator_actions import OperatorAction, WaitAction
+from kit.processor.operator.operator_agent_base import AgentActResult, OperatorAgent
+from kit.processor.operator.operator_environment_base import (
     EnvironmentType,
     EnvState,
     EnvStepResult,
 )
 from kit.routers.helpers import send_message_to_model_wrapper
-from KIT.utils.helpers import get_openai_async_client, is_none_or_empty
+from kit.utils.helpers import get_openai_async_client, is_none_or_empty
 
 logger = logging.getLogger(__name__)
 

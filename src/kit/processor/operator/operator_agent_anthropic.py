@@ -8,10 +8,10 @@ from typing import List, Literal, Optional, cast
 
 from anthropic.types.beta import BetaContentBlock, BetaTextBlock, BetaToolUseBlock
 
-from KIT.database.models import ChatModel
-from KIT.processor.conversation.anthropic.utils import is_reasoning_model
-from KIT.processor.conversation.utils import AgentMessage
-from KIT.processor.operator.operator_actions import (
+from kit.database.models import ChatModel
+from kit.processor.conversation.anthropic.utils import is_reasoning_model
+from kit.processor.conversation.utils import AgentMessage
+from kit.processor.operator.operator_actions import (
     BackAction,
     ClickAction,
     CursorPositionAction,
@@ -37,13 +37,13 @@ from KIT.processor.operator.operator_actions import (
     TypeAction,
     WaitAction,
 )
-from KIT.processor.operator.operator_agent_base import AgentActResult, OperatorAgent
-from KIT.processor.operator.operator_environment_base import (
+from kit.processor.operator.operator_agent_base import AgentActResult, OperatorAgent
+from kit.processor.operator.operator_environment_base import (
     EnvironmentType,
     EnvState,
     EnvStepResult,
 )
-from KIT.utils.helpers import get_anthropic_async_client, is_none_or_empty
+from kit.utils.helpers import get_anthropic_async_client, is_none_or_empty
 
 logger = logging.getLogger(__name__)
 

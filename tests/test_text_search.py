@@ -160,7 +160,7 @@ def test_entry_chunking_by_max_tokens_not_full_corpus(tmp_path, search_config, d
 * KIT
 /Allow natural language search on user content like notes, images using transformer based models/
 
-All data is processed locally. User can interface with KIT app via [[./interface/emacs/KIT.el][Emacs]], API or Commandline
+All data is processed locally. User can interface with KIT app via [[./interface/emacs/kit.el][Emacs]], API or Commandline
 
 ** Dependencies
 - Python3

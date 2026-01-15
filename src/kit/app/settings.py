@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("KIT_DJANGO_SECRET_KEY", "!secret")
 
 # Set KIT_DOMAIN to custom domain for production deployments.
-KIT_DOMAIN = os.getenv("KIT_DOMAIN") or "KIT.dev"
+KIT_DOMAIN = os.getenv("KIT_DOMAIN") or "kit.dev"
 
 # Set KIT_ALLOWED_DOMAIN to the i.p or domain of the KIT service on the internal network.
 # Useful to set when running the service behind a reverse proxy.

@@ -4,11 +4,11 @@ from typing import Tuple
 
 import requests
 
-from KIT.database.models import Entry as DbEntry
-from KIT.database.models import KITUser, NotionConfig
-from KIT.processor.content.text_to_entries import TextToEntries
-from KIT.utils.helpers import timer
-from KIT.utils.rawconfig import Entry, NotionContentConfig
+from kit.database.models import Entry as DbEntry
+from kit.database.models import KITUser, NotionConfig
+from kit.processor.content.text_to_entries import TextToEntries
+from kit.utils.helpers import timer
+from kit.utils.rawconfig import Entry, NotionContentConfig
 
 logger = logging.getLogger(__name__)
 
