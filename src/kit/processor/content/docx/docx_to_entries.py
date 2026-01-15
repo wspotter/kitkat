@@ -4,11 +4,11 @@ from typing import Dict, List, Tuple
 
 from langchain_community.document_loaders import Docx2txtLoader
 
-from KIT.database.models import Entry as DbEntry
-from KIT.database.models import KITUser
-from KIT.processor.content.text_to_entries import TextToEntries
-from KIT.utils.helpers import timer
-from KIT.utils.rawconfig import Entry
+from kit.database.models import Entry as DbEntry
+from kit.database.models import KITUser
+from kit.processor.content.text_to_entries import TextToEntries
+from kit.utils.helpers import timer
+from kit.utils.rawconfig import Entry
 
 logger = logging.getLogger(__name__)
 
