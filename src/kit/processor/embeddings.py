@@ -13,15 +13,15 @@ from tenacity import (
 )
 from torch import nn
 
-from KIT.database.models import SearchModelConfig
-from KIT.utils.helpers import (
+from kit.database.models import SearchModelConfig
+from kit.utils.helpers import (
     fix_json_dict,
     get_device,
     get_openai_client,
     merge_dicts,
     timer,
 )
-from KIT.utils.rawconfig import SearchResponse
+from kit.utils.rawconfig import SearchResponse
 
 logger = logging.getLogger(__name__)
 
