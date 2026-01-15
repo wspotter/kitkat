@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch KIT",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "src.KIT.main",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "sudo": true,
+            "args": [
+                "-v",
+                "--anonymous-mode",
+                "--non-interactive",
+                "--port=42110"
+            ],
+            "envFile": "${workspaceFolder}/.env",
+            "env": {
+                "KIT_ADMIN_EMAIL": "admin",
+                "KIT_ADMIN_PASSWORD": "admin",
+                "USE_EMBEDDED_DB": "true",
+                "KIT_DEBUG": "true",
+                "KIT_TELEMETRY_DISABLED": "true",
+                "PROMPTRACE_DIR": "${workspaceFolder}/promptrace"
+            }
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "KIT",
+  "version": "2.0.0-beta.24",
+  "description": "Your Second Brain",
+  "author": "KIT Inc. <team@KIT.dev>",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://KIT.dev",
+  "repository": "\"https://github.com/KIT-ai/KIT\"",
+  "productName": "KIT",
+  "main": "main.js",
+  "private": false,
+  "devDependencies": {
+    "electron": "35.7.5"
+  },
+  "scripts": {
+    "start": "yarn electron ."
+  },
+  "dependencies": {
+    "@todesktop/runtime": "^2.0.0",
+    "axios": "^1.8.2",
+    "cron": "^2.4.3",
+    "electron-store": "^8.1.0"
+  }
+}

@@ -1,0 +1,48 @@
+{% macro heading_pane(user_photo, username, is_active, has_documents) -%}
+    <div class="KIT-header">
+        <a class="KIT-logo" href="/">
+            <img class="KIT-logo" src="/static/assets/icons/KIT-logo-sideways-500.png?v={{ KIT_version }}" alt="KIT"></img>
+        </a>
+        <nav class="KIT-nav">
+            <a id="chat-nav" class="KIT-nav" href="/chat">
+                <img class="nav-icon" src="/static/assets/icons/chat.svg" alt="Chat">
+                <span class="KIT-nav-item-text">Chat</span></a>
+            <a id="agents-nav" class="KIT-nav" href="/agents">
+                <img id="agents-icon" class="nav-icon" src="/static/assets/icons/agents.svg" alt="Agents">
+                <span class="KIT-nav-item-text">Agents</span></a>
+            <a id="automations-nav" class="KIT-nav" href="/automations">
+                <img class="nav-icon" src="/static/assets/icons/automation.svg" alt="Automation">
+                <span class="KIT-nav-item-text">Automate</span></a>
+            {% if has_documents %}
+            <a id="search-nav" class="KIT-nav" href="/search">
+                <img class="nav-icon" src="/static/assets/icons/search.svg" alt="Search">
+                <span class="KIT-nav-item-text">Search</span></a>
+            {% endif %}
+            <!-- Dropdown Menu -->
+            {% if username %}
+                <div id="KIT-nav-menu-container" class="KIT-nav dropdown">
+                    {% if user_photo and user_photo != "None" %}
+                        {% if is_active %}
+                        <img id="profile-picture" class="circle subscribed" src="{{ user_photo }}" alt="{{ username[0].upper() }}" onclick="toggleMenu()" referrerpolicy="no-referrer">
+                        {% else %}
+                        <img id="profile-picture" class="circle" src="{{ user_photo }}" alt="{{ username[0].upper() }}" onclick="toggleMenu()" referrerpolicy="no-referrer">
+                        {% endif %}
+                    {% else %}
+                        {% if is_active %}
+                        <div id="profile-picture" class="circle user-initial subscribed" alt="{{ username[0].upper() }}" onclick="toggleMenu()">{{ username[0].upper() }}</div>
+                        {% else %}
+                        <div id="profile-picture" class="circle user-initial" alt="{{ username[0].upper() }}" onclick="toggleMenu()">{{ username[0].upper() }}</div>
+                        {% endif %}
+                    {% endif %}
+                    <div id="KIT-nav-menu" class="KIT-nav-dropdown-content">
+                        <div class="KIT-nav-username"> {{ username }} </div>
+                        <a id="settings-nav" class="KIT-nav" href="/settings">Settings</a>
+                        <a id="github-nav" class="KIT-nav" href="https://github.com/KIT-ai/KIT">GitHub</a>
+                        <a id="help-nav" class="KIT-nav" href="https://docs.KIT.dev" target="_blank">Help</a>
+                        <a class="KIT-nav" href="/auth/logout">Logout</a>
+                    </div>
+                </div>
+            {% endif %}
+        </nav>
+    </div>
+{%- endmacro %}
