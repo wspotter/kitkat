@@ -2,10 +2,10 @@ import os
 import re
 import time
 
-from KIT.processor.content.org_mode.org_to_entries import OrgToEntries
-from KIT.processor.content.text_to_entries import TextToEntries
-from KIT.utils.helpers import is_none_or_empty
-from KIT.utils.rawconfig import Entry
+from kit.processor.content.org_mode.org_to_entries import OrgToEntries
+from kit.processor.content.text_to_entries import TextToEntries
+from kit.utils.helpers import is_none_or_empty
+from kit.utils.rawconfig import Entry
 
 
 def test_configure_indexing_heading_only_entries(tmp_path):

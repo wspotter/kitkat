@@ -3,9 +3,9 @@ from urllib.parse import quote
 
 import pytest
 
-from KIT.database.models import KITApiUser, KITUser
-from KIT.processor.content.org_mode.org_to_entries import OrgToEntries
-from KIT.search_type import text_search
+from kit.database.models import KITApiUser, KITUser
+from kit.processor.content.org_mode.org_to_entries import OrgToEntries
+from kit.search_type import text_search
 
 
 # ----------------------------------------------------------------------------------------------------

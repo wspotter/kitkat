@@ -6,12 +6,12 @@ import pytest
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
-from KIT.configure import configure_routes, configure_search_types
-from KIT.database.adapters import EntryAdapters
-from KIT.database.models import KITApiUser, KITUser
-from KIT.processor.content.org_mode.org_to_entries import OrgToEntries
-from KIT.search_type import text_search
-from KIT.utils import state
+from kit.configure import configure_routes, configure_search_types
+from kit.database.adapters import EntryAdapters
+from kit.database.models import KITApiUser, KITUser
+from kit.processor.content.org_mode.org_to_entries import OrgToEntries
+from kit.search_type import text_search
+from kit.utils import state
 
 
 # Test

@@ -2,8 +2,8 @@ import time
 
 import pytest
 
-from KIT.database.adapters import ProcessLockAdapters
-from KIT.database.models import ProcessLock
+from kit.database.adapters import ProcessLockAdapters
+from kit.database.models import ProcessLock
 from tests.helpers import ProcessLockFactory
 
 

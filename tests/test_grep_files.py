@@ -2,9 +2,9 @@
 import pytest
 import logging
 
-from KIT.database.adapters import FileObjectAdapters
-from KIT.database.models import KITUser
-from KIT.routers.helpers import grep_files
+from kit.database.adapters import FileObjectAdapters
+from kit.database.models import KITUser
+from kit.routers.helpers import grep_files
 
 logger = logging.getLogger(__name__)
 

@@ -1,4 +1,4 @@
-from KIT.processor.content.images.image_to_entries import ImageToEntries
+from kit.processor.content.images.image_to_entries import ImageToEntries
 
 
 def test_png_to_jsonl():

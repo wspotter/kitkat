@@ -4,8 +4,8 @@ import urllib.parse
 import pytest
 from freezegun import freeze_time
 
-from KIT.database.models import Agent, Entry, KITUser
-from KIT.processor.conversation import prompts
+from kit.database.models import Agent, Entry, KITUser
+from kit.processor.conversation import prompts
 from tests.helpers import ConversationFactory, generate_chat_history, get_chat_api_key
 
 # Initialize variables for tests

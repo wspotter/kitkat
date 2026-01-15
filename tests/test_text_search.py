@@ -5,12 +5,12 @@ import os
 
 import pytest
 
-from KIT.database.adapters import EntryAdapters
-from KIT.database.models import Entry, GithubConfig, KITUser
-from KIT.processor.content.github.github_to_entries import GithubToEntries
-from KIT.processor.content.org_mode.org_to_entries import OrgToEntries
-from KIT.processor.content.text_to_entries import TextToEntries
-from KIT.search_type import text_search
+from kit.database.adapters import EntryAdapters
+from kit.database.models import Entry, GithubConfig, KITUser
+from kit.processor.content.github.github_to_entries import GithubToEntries
+from kit.processor.content.org_mode.org_to_entries import OrgToEntries
+from kit.processor.content.text_to_entries import TextToEntries
+from kit.search_type import text_search
 from tests.helpers import get_index_files, get_sample_data
 
 logger = logging.getLogger(__name__)

@@ -1,4 +1,4 @@
-from KIT.processor.content.docx.docx_to_entries import DocxToEntries
+from kit.processor.content.docx.docx_to_entries import DocxToEntries
 
 
 def test_single_page_docx_to_jsonl():

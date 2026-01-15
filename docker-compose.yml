@@ -13,7 +13,10 @@ services:
       timeout: 10s
       retries: 5
   sandbox:
-    image: ghcr.io/KIT-ai/terrarium:latest
+    # image: ghcr.io/kit-ai/terrarium:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8080/health"]
       interval: 30s
@@ -27,25 +30,24 @@ services:
       - SEARXNG_BASE_URL=http://localhost:8080/
   # Creates Computer for KIT to use.
   # Set KIT_OPERATOR_ENABLED=True in the server service environment variable to enable.
-  computer:
-    container_name: KIT-computer
-    image: ghcr.io/KIT-ai/KIT-computer:latest
-    # build:
-    #   context: .
-    #   dockerfile: computer.Dockerfile
-    ports:
-      - "5900:5900"
-    volumes:
-      - KIT_computer:/home/operator
+  # computer:
+  #   container_name: KIT-computer
+  #   # image: ghcr.io/kit-ai/kit-computer:latest
+  #   build:
+  #     context: .
+  #     dockerfile: computer.Dockerfile
+  #   ports:
+  #     - "5900:5900"
+  #   volumes:
+  #     - KIT_computer:/home/operator
   server:
     depends_on:
       database:
         condition: service_healthy
     # Use the following line to use the latest version of KIT. Otherwise, it will build from source. Set this to ghcr.io/KIT-ai/KIT-cloud:latest if you want to use the prod image.
-    image: ghcr.io/KIT-ai/KIT:latest
-    # Uncomment the following line to build from source. This will take a few minutes. Comment the next two lines out if you want to use the official image.
-    # build:
-      # context: .
+    # image: ghcr.io/kit-ai/kit:latest
+    build:
+      context: .
     ports:
       # If changing the local port (left hand side), no other changes required.
       # If changing the remote port (right hand side),

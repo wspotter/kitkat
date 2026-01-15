@@ -1,5 +1,5 @@
 # Application Packages
-from KIT.search_filter.word_filter import WordFilter
+from kit.search_filter.word_filter import WordFilter
 
 
 # Mock Entry class for testing

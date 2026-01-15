@@ -7,8 +7,8 @@ import factory
 from asgiref.sync import sync_to_async
 from django.utils.timezone import make_aware
 
-from KIT.database.adapters import AgentAdapters
-from KIT.database.models import (
+from kit.database.adapters import AgentAdapters
+from kit.database.models import (
     Agent,
     AiModelApi,
     ChatMessageModel,
@@ -23,8 +23,8 @@ from KIT.database.models import (
     UserConversationConfig,
     UserMemory,
 )
-from KIT.processor.conversation.utils import message_to_log
-from KIT.utils.helpers import get_absolute_path, is_none_or_empty
+from kit.processor.conversation.utils import message_to_log
+from kit.utils.helpers import get_absolute_path, is_none_or_empty
 
 logger = logging.getLogger(__name__)
 

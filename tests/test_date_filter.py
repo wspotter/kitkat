@@ -3,7 +3,7 @@ from datetime import datetime
 
 import pytest
 
-from KIT.search_filter.date_filter import DateFilter
+from kit.search_filter.date_filter import DateFilter
 
 
 @pytest.mark.filterwarnings("ignore:The localize method is no longer necessary.")

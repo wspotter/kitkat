@@ -5,7 +5,7 @@
             "name": "Launch KIT",
             "type": "debugpy",
             "request": "launch",
-            "module": "src.KIT.main",
+            "module": "src.kit.main",
             "console": "integratedTerminal",
             "justMyCode": false,
             "sudo": true,

@@ -1,5 +1,5 @@
 # Application Packages
-from KIT.search_filter.file_filter import FileFilter
+from kit.search_filter.file_filter import FileFilter
 
 
 # Mock Entry class for testing

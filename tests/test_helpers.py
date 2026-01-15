@@ -6,12 +6,12 @@ import psutil
 import pytest
 from scipy.stats import linregress
 
-from KIT.processor.embeddings import EmbeddingsModel
-from KIT.processor.tools.online_search import (
+from kit.processor.embeddings import EmbeddingsModel
+from kit.processor.tools.online_search import (
     read_webpage_at_url,
     read_webpage_with_olostep,
 )
-from KIT.utils import helpers
+from kit.utils import helpers
 
 
 def test_get_from_null_dict():

@@ -19,7 +19,7 @@ import yaml
 from datasets import Dataset, load_dataset
 from tqdm import tqdm
 
-from KIT.utils.helpers import (
+from kit.utils.helpers import (
     batcher,
     get_cost_of_chat_message,
     is_none_or_empty,

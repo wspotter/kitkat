@@ -5,10 +5,10 @@ import freezegun
 import pytest
 from freezegun import freeze_time
 
-from KIT.database.models import ChatMessageModel
-from KIT.processor.conversation.openai.gpt import converse_openai
-from KIT.processor.conversation.utils import message_to_log
-from KIT.routers.helpers import (
+from kit.database.models import ChatMessageModel
+from kit.processor.conversation.openai.gpt import converse_openai
+from kit.processor.conversation.utils import message_to_log
+from kit.routers.helpers import (
     aget_data_sources_and_output_format,
     extract_questions,
     generate_online_subqueries,
@@ -16,7 +16,7 @@ from KIT.routers.helpers import (
     schedule_query,
     should_notify,
 )
-from KIT.utils.helpers import ConversationCommand
+from kit.utils.helpers import ConversationCommand
 from tests.helpers import generate_chat_history, get_chat_api_key
 
 # Initialize variables for tests

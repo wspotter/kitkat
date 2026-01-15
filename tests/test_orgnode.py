@@ -1,6 +1,6 @@
 import datetime
 
-from KIT.processor.content.org_mode import orgnode
+from kit.processor.content.org_mode import orgnode
 
 
 # Test

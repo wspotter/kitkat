@@ -3,13 +3,13 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.testclient import TestClient
 
-from KIT.configure import (
+from kit.configure import (
     configure_middleware,
     configure_routes,
     configure_search_types,
 )
-from KIT.database.adapters import get_default_search_model
-from KIT.database.models import (
+from kit.database.adapters import get_default_search_model
+from kit.database.models import (
     Agent,
     ChatModel,
     FileObject,
@@ -18,13 +18,13 @@ from KIT.database.models import (
     KITApiUser,
     KITUser,
 )
-from KIT.processor.content.org_mode.org_to_entries import OrgToEntries
-from KIT.processor.content.plaintext.plaintext_to_entries import PlaintextToEntries
-from KIT.processor.embeddings import CrossEncoderModel, EmbeddingsModel
-from KIT.routers.api_content import configure_content
-from KIT.search_type import text_search
-from KIT.utils import state
-from KIT.utils.constants import web_directory
+from kit.processor.content.org_mode.org_to_entries import OrgToEntries
+from kit.processor.content.plaintext.plaintext_to_entries import PlaintextToEntries
+from kit.processor.embeddings import CrossEncoderModel, EmbeddingsModel
+from kit.routers.api_content import configure_content
+from kit.search_type import text_search
+from kit.utils import state
+from kit.utils.constants import web_directory
 from tests.helpers import (
     AiModelApiFactory,
     ChatModelFactory,

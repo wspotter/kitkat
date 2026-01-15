@@ -3,11 +3,11 @@
 This guide enables AI coding agents to be immediately productive in the KIT codebase. It summarizes architecture, workflows, conventions, and integration points unique to KIT.
 
 ## Big Picture Architecture
-- **Core App**: Located in `src/KIT/`, built on FastAPI + Django. Entry point is `main.py`.
+- **Core App**: Located in `src/kit/`, built on FastAPI + Django. Entry point is `main.py`.
 - **Multi-Client Support**: Interfaces for web, desktop, emacs, obsidian, whatsapp, etc. in `src/interface/`.
-- **Database**: Uses PostgreSQL with pgvector for vector search. Models and adapters in `src/KIT/database/`.
-- **Agents & Automation**: Custom agents, automation, and chat logic in `src/KIT/routers/` and `src/KIT/processor/`.
-- **Search & Indexing**: Semantic search, embeddings, and cross-encoder models configured in `src/KIT/processor/embeddings.py` and managed via adapters.
+- **Database**: Uses PostgreSQL with pgvector for vector search. Models and adapters in `src/kit/database/`.
+- **Agents & Automation**: Custom agents, automation, and chat logic in `src/kit/routers/` and `src/kit/processor/`.
+- **Search & Indexing**: Semantic search, embeddings, and cross-encoder models configured in `src/kit/processor/embeddings.py` and managed via adapters.
 - **Scheduler**: Background tasks and scheduled jobs use APScheduler, with distributed leader election via process locks.
 - **Content Indexing**: Content from docs, images, PDFs, org-mode, markdown, etc. indexed for search and retrieval.
 
@@ -16,17 +16,17 @@ This guide enables AI coding agents to be immediately productive in the KIT code
   ```sh
   docker compose up --build
   ```
-- **Entry Point**: `src/KIT/main.py` (FastAPI/Django ASGI app). CLI via `KIT.main:run` (see `pyproject.toml`).
-- **Database Migrations**: Handled automatically on startup. Manual: `python src/KIT/manage.py migrate`.
-- **Static Files**: Collected on startup. Manual: `python src/KIT/manage.py collectstatic`.
+- **Entry Point**: `src/kit/main.py` (FastAPI/Django ASGI app). CLI via `kit.main:run` (see `pyproject.toml`).
+- **Database Migrations**: Handled automatically on startup. Manual: `python src/kit/manage.py migrate`.
+- **Static Files**: Collected on startup. Manual: `python src/kit/manage.py collectstatic`.
 - **Testing**: Use `pytest` (see `pytest.ini`, `pyproject.toml`). Example:
   ```sh
   pytest
   ```
 - **Linting/Formatting**: Use `ruff` and `mypy` (see `pyproject.toml`). Example:
   ```sh
-  ruff check src/KIT/
-  mypy src/KIT/
+  ruff check src/kit/
+  mypy src/kit/
   ```
 - **Configuration**: Environment variables set in Docker Compose. See comments in `docker-compose.yml` for model, API, and feature toggles.
 
@@ -47,11 +47,11 @@ This guide enables AI coding agents to be immediately productive in the KIT code
 - **Database**: Uses pgvector for semantic search, persistent volumes for data.
 
 ## Key Files & Directories
-- `src/KIT/main.py`: App entry point, server setup, scheduler, logging.
-- `src/KIT/configure.py`: Routing, middleware, authentication, search types, scheduled jobs.
-- `src/KIT/database/`: Models and adapters for DB access and process locks.
-- `src/KIT/processor/`: Embeddings, cross-encoder, semantic search logic.
-- `src/KIT/routers/`: API endpoints for agents, chat, automation, content, etc.
+- `src/kit/main.py`: App entry point, server setup, scheduler, logging.
+- `src/kit/configure.py`: Routing, middleware, authentication, search types, scheduled jobs.
+- `src/kit/database/`: Models and adapters for DB access and process locks.
+- `src/kit/processor/`: Embeddings, cross-encoder, semantic search logic.
+- `src/kit/routers/`: API endpoints for agents, chat, automation, content, etc.
 - `docker-compose.yml`: Service orchestration, environment config.
 - `pyproject.toml`: Dependencies, scripts, lint/test config.
 - `README.md`: High-level overview, links to docs and contributing.

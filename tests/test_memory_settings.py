@@ -15,9 +15,9 @@ These tests verify:
 import pytest
 from unittest.mock import MagicMock
 
-from KIT.database.adapters import ConversationAdapters, UserMemoryAdapters
-from KIT.database.models import ServerChatSettings, UserConversationConfig
-from KIT.routers.helpers import get_user_config
+from kit.database.adapters import ConversationAdapters, UserMemoryAdapters
+from kit.database.models import ServerChatSettings, UserConversationConfig
+from kit.routers.helpers import get_user_config
 from tests.helpers import (
     acreate_user,
     acreate_subscription,

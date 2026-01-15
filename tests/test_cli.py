@@ -1,7 +1,7 @@
 # Standard Modules
 from pathlib import Path
 
-from KIT.utils.cli import cli
+from kit.utils.cli import cli
 
 
 # Test

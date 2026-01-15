@@ -2,7 +2,7 @@ import os
 import re
 from pathlib import Path
 
-from KIT.processor.content.markdown.markdown_to_entries import MarkdownToEntries
+from kit.processor.content.markdown.markdown_to_entries import MarkdownToEntries
 
 
 def test_extract_markdown_with_no_headings(tmp_path):

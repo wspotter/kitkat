@@ -5,10 +5,10 @@ from collections import Counter
 import pytest
 from asgiref.sync import sync_to_async
 
-from KIT.database.adapters import AgentAdapters
-from KIT.database.models import Agent, ChatModel, Entry, FileObject, KITUser
-from KIT.routers.helpers import execute_search
-from KIT.utils.helpers import get_absolute_path
+from kit.database.adapters import AgentAdapters
+from kit.database.models import Agent, ChatModel, Entry, FileObject, KITUser
+from kit.routers.helpers import execute_search
+from kit.utils.helpers import get_absolute_path
 from tests.helpers import ChatModelFactory
 
 
