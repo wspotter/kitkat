@@ -72,7 +72,7 @@ else:
 INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
-    "KIT.database.apps.DatabaseConfig",
+    "kit.database.apps.DatabaseConfig",
     "unfold",
     "django.contrib.admin",
     "django.contrib.sessions",
@@ -92,7 +92,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "KIT.app.urls"
+ROOT_URLCONF = "kit.app.urls"
 
 TEMPLATES = [
     {
