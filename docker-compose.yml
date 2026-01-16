@@ -70,10 +70,10 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_HOST=database
       - POSTGRES_PORT=5432
-      - KIT_DJANGO_SECRET_KEY=secret
+      - KIT_DJANGO_SECRET_KEY=stacy
       - KIT_DEBUG=False
       - KIT_ADMIN_EMAIL=username@example.com
-      - KIT_ADMIN_PASSWORD=password
+      - KIT_ADMIN_PASSWORD=stacy
       # Default URL of Terrarium, the default Python sandbox used by KIT to run code. Its container is specified above
       - KIT_TERRARIUM_URL=http://sandbox:8080
       # Uncomment line below to have KIT run code in remote E2B code sandbox instead of the self-hosted Terrarium sandbox above. Get your E2B API key from https://e2b.dev/.
@@ -82,7 +82,7 @@ services:
       - KIT_SEARXNG_URL=http://search:8080
       # Uncomment line below to use with Ollama running on your local machine at localhost:11434.
       # Change URL to use with other OpenAI API compatible providers like VLLM, LMStudio, DeepInfra, DeepSeek etc.
-      # - OPENAI_BASE_URL=http://host.docker.internal:11434/v1/
+      - OPENAI_BASE_URL=http://host.docker.internal:1234/v1/
       # - KIT_DEFAULT_CHAT_MODEL=qwen3
       #
       # Uncomment appropriate lines below to use chat models by OpenAI, Anthropic, Google.
