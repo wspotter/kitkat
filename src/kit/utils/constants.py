@@ -2,10 +2,10 @@ from pathlib import Path
 from typing import Dict
 
 app_root_directory = Path(__file__).parent.parent.parent
-web_directory = app_root_directory / "KIT/interface/web/"
+web_directory = app_root_directory / "kit/interface/web/"
 home_directory = web_directory / "home/"
-next_js_directory = app_root_directory / "KIT/interface/built/"
-pypi_static_directory = app_root_directory / "KIT/interface/compiled/"
+next_js_directory = app_root_directory / "kit/interface/built/"
+pypi_static_directory = app_root_directory / "kit/interface/compiled/"
 assetlinks_file_path = web_directory / ".well-known/assetlinks.json"
 empty_escape_sequences = "\n|\r|\t| "
 app_env_filepath = "~/.KIT/env"
